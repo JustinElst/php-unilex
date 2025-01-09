@@ -25,3 +25,11 @@ services:
       - .:/app
       - ./docker/php.ini:/usr/local/etc/php/conf.d/memory_limit.ini
     working_dir: /app
+  php8.4:
+    build:
+      context: .
+      dockerfile: php-8.4.Dockerfile
+    volumes:
+      - .:/app
+      - ./docker/php.ini:/usr/local/etc/php/conf.d/memory_limit.ini
+    working_dir: /app
