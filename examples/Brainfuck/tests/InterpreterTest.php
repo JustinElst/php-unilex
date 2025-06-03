@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace Remorhaz\UniLex\Example\Brainfuck\Test;
 
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use Remorhaz\UniLex\Example\Brainfuck\Exception as BrainfuckException;
 use Remorhaz\UniLex\Example\Brainfuck\Interpreter;
 use Remorhaz\UniLex\Exception as UniLexException;
 
-/**
- * @covers \Remorhaz\UniLex\Example\Brainfuck\Interpreter
- */
+ #[CoversClass(Interpreter::class)]
 class InterpreterTest extends TestCase
 {
     /**
