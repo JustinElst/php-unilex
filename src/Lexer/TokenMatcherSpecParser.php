@@ -338,7 +338,7 @@ class TokenMatcherSpecParser
         return isset($this->codeBlockList[$key]);
     }
 
-    private function getCodeBlock(string $key = null, string $defaultValue = ''): string
+    private function getCodeBlock(?string $key = null, string $defaultValue = ''): string
     {
         $effectiveKey = $key ?? $this->codeBlockKey;
 
@@ -347,7 +347,7 @@ class TokenMatcherSpecParser
             : trim($defaultValue);
     }
 
-    private function resetCodeBlock(string $key = null): void
+    private function resetCodeBlock(?string $key = null): void
     {
         $effectiveKey = $key ?? $this->codeBlockKey;
         if (isset($effectiveKey)) {
@@ -355,7 +355,7 @@ class TokenMatcherSpecParser
         }
     }
 
-    private function appendCodeBlock(string $code, string $key = null): void
+    private function appendCodeBlock(string $code, ?string $key = null): void
     {
         $effectiveKey = $key ?? $this->codeBlockKey;
         if (isset($effectiveKey)) {

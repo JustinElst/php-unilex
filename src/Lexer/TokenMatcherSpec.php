@@ -72,7 +72,7 @@ class TokenMatcherSpec
     /**
      * @throws ReflectionException
      */
-    public function addUsedClass(string $name, string $alias = null): self
+    public function addUsedClass(string $name, ?string $alias = null): self
     {
         $this->initUsedClassList();
         if (in_array($name, $this->usedClassList)) {

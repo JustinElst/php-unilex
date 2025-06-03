@@ -17,7 +17,7 @@ class Tree
 
     private ?int $rootNodeId = null;
 
-    public function createNode(string $name, int $id = null): Node
+    public function createNode(string $name, ?int $id = null): Node
     {
         $node = new Node($id ?? $this->getNextNodeId(), $name);
         $this->nodeMap[$node->getId()] = $node;
