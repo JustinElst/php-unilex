@@ -34,10 +34,9 @@ class NfaBuilderTest extends TestCase
     }
 
     /**
-     * @param string $name
      * @throws UniLexException
-     * @dataProvider providerTerminalNodeNames
      */
+    #[DataProvider('providerTerminalNodeNames')]
     public function testOnBeginProduction_TerminalNodeWithChild_ThrowsException(string $name): void
     {
         $node = new Node(1, $name);
