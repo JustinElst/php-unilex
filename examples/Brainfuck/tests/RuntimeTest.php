@@ -4,22 +4,21 @@ declare(strict_types=1);
 
 namespace Remorhaz\UniLex\Example\Brainfuck\Test;
 
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Remorhaz\UniLex\Example\Brainfuck\Command\OutputCommand;
 use Remorhaz\UniLex\Example\Brainfuck\Exception as BrainfuckException;
 use Remorhaz\UniLex\Example\Brainfuck\Runtime;
 
-/**
- * @covers \Remorhaz\UniLex\Example\Brainfuck\Runtime
- * @covers \Remorhaz\UniLex\Example\Brainfuck\Command\OutputCommand
- */
+ #[CoversClass(Runtime::class)]
+ #[CoversClass(OutputCommand::class)]
 class RuntimeTest extends TestCase
 {
     /**
-     * @param int $memory
-     * @dataProvider providerNonPositiveMemory
      * @throws BrainfuckException
      */
+    #[DataProvider('providerNonPositiveMemory')]
     public function testConstruct_NonPositiveMemory_ThrowsException(int $memory): void
     {
         $this->expectException(BrainfuckException::class);
