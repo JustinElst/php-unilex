@@ -15,7 +15,7 @@ It's written in PHP and generates code in PHP.
 [WIP] Work in progress
 ```
 ## Requirements
-* PHP 8
+* PHP ^8.2
 
 ***
 ## License
