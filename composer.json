@@ -87,7 +87,7 @@
     ],
     "infection": [
       "mkdir -p build/logs/infection",
-      "tools/infection --threads=4 --coverage=build/logs --no-progress --skip-initial-tests"
+      "vendor/bin/infection --threads=4 --coverage=build/logs --no-progress --skip-initial-tests"
     ],
     "test-infection": [
       "@test-unit",
